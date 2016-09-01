@@ -7,7 +7,8 @@ develop:
   container_name: gfw-geostore-api-develop
   environment:
     NODE_ENV: dev
-    API_GATEWAY_URL: http://192.168.99.100:8000
+    CT_URL: http://192.168.99.100:9000
+    LOCAL_URL: http://192.168.99.100:3100
   command: develop
   links:
     - mongo

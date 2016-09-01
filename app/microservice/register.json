@@ -1,20 +1,19 @@
 {
-    "id": "#(service.id)",
-    "name": "#(service.name)",
+    "name": "gfw-geostore-api",
     "tags": ["gfw"],
-    "urls": [{
-        "url": "/geostore",
+    "endpoints": [{
+        "path": "/geostore",
         "method": "POST",
-        "endpoints": [{
+        "redirect": {
             "method": "POST",
             "path": "/api/v1/geostore"
-        }]
+        }
     }, {
-        "url": "/geostore/:id",
+        "path": "/geostore/:id",
         "method": "GET",
-        "endpoints": [{
+        "redirect": {
             "method": "GET",
             "path": "/api/v1/geostore/:id"
-        }]
+        }
     }]
 }
